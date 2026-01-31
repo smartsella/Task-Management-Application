@@ -3,7 +3,7 @@ import { useState } from "react";
 const TaskManager = () => {
 
   const [tasks, setTasks] = useState([]);
-  const [task, setTask] = useState("");
+  const [task, setTask] = useState("")
 
   // taskk added
   const addTask = () => {
