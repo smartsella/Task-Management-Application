@@ -1,9 +1,8 @@
 import { useState } from "react";
 
 const TaskManager = () => {
-
   const [tasks, setTasks] = useState([]);
-  const [task, setTask] = useState("")
+  const [task, setTask] = useState("");
 
   // taskk added
   const addTask = () => {
@@ -14,7 +13,7 @@ const TaskManager = () => {
 
   // task remove
   const removeTask = (id) => {
-    setTasks(tasks.filter(t => t.id !== id));
+    setTasks(tasks.filter((t) => t.id !== id));
   };
 
   return (
@@ -24,15 +23,15 @@ const TaskManager = () => {
       <input
         value={task}
         placeholder="New task"
-        onChange={e => setTask(e.target.value)}
+        onChange={(e) => setTask(e.target.value)}
       />
       <button onClick={addTask}>Add</button>
 
       <ul>
-        {tasks.map(e => (
+        {tasks.map((e) => (
           <li key={e.id}>
-            {e.title} <br /> 
-            <button onClick={() => removeTask(t.id)}>Remove this Task</button>
+            {e.title} <br />
+            <button onClick={() => removeTask(e.id)}>Remove this Task</button>
             <br /> <br />
           </li>
         ))}
